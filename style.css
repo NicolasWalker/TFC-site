@@ -109,6 +109,89 @@ a:hover {
     font-size: 11px;
 }
 
+/* Journal (blog) styles */
+.journal-main {
+    max-width: 700px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px 120px 20px; /* bottom padding for footer */
+}
+
+.journal-main h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.article {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    padding: 2rem 2rem 1.5rem 2rem;
+    transition: box-shadow 0.2s;
+    border: 1px solid #f0ede7;
+}
+.article:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.article h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.article h2 a {
+    border-bottom: none;
+    color: #2a2a2a;
+}
+.article-meta {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 0.7rem;
+}
+.article-excerpt {
+    font-size: 1.08rem;
+    color: #3a3a3a;
+    margin-bottom: 0;
+}
+
+/* Journal header styles */
+.journal-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.2rem;
+    margin-bottom: 2.2rem;
+}
+.journal-header .logo {
+    height: 32px;
+    width: auto;
+    display: block;
+    margin: 0 auto 0.7rem auto;
+    position: static;
+}
+.journal-header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+.journal-header nav a {
+    font-size: 1rem;
+    border-bottom: 1px solid #2a2a2a;
+    color: #2a2a2a;
+    padding: 0.2em 0.5em;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     body {
@@ -142,5 +225,37 @@ a:hover {
     }
     .footer-copyright {
         font-size: 10px;
+    }
+
+    .journal-main {
+        max-width: 98vw;
+        margin-top: 30px;
+        padding: 0 5px 90px 5px;
+    }
+    .journal-main h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    .article {
+        padding: 1.1rem 0.7rem 1rem 0.7rem;
+    }
+    .article h2 {
+        font-size: 1.1rem;
+    }
+    .article-excerpt {
+        font-size: 0.98rem;
+    }
+
+    .journal-header {
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .journal-header .logo {
+        height: 22px;
+        margin-bottom: 0.4rem;
+    }
+    .journal-header nav a {
+        font-size: 0.95rem;
+        padding: 0.2em 0.3em;
     }
 } 

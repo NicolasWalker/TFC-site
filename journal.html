@@ -16,18 +16,32 @@
 </script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="logo.png" alt="The Folclore Company" class="logo">
-            <nav>
-                <a href="index.html">Home</a>
-            </nav>
-        </div>
+    <header class="journal-header">
+        <img src="logo.png" alt="The Folclore Company" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
     </header>
 
-    <main>
-        <h1>Journal</h1>
-        <ul class="article-list" id="articles"></ul>
+    <main class="journal-main">
+      <h1>Journal</h1>
+      <section class="article-list">
+        <article class="article">
+          <h2><a href="article-1.html">Founders' Journey: From Vision to Reality</a></h2>
+          <p class="article-meta">October 13, 2018</p>
+          <p class="article-excerpt">Nick Walker and Gui Junqueira share the story behind The Folclore Company and their mission to redefine luxury through a tropical lens.</p>
+        </article>
+        <article class="article">
+          <h2><a href="article-2.html">The Art of Tropical Luxury</a></h2>
+          <p class="article-meta">January 15, 2020</p>
+          <p class="article-excerpt">Exploring the intersection of Latin heritage and contemporary luxury, we uncover what makes tropical elegance a unique expression of sophistication.</p>
+        </article>
+        <article class="article">
+          <h2><a href="article-3.html">Craftsmanship Meets Culture</a></h2>
+          <p class="article-meta">December 20, 2021</p>
+          <p class="article-excerpt">A deep dive into our process of selecting artisans and materials that honor tradition while pushing the boundaries of modern design.</p>
+        </article>
+      </section>
     </main>
 
     <div class="footer">
@@ -38,48 +52,5 @@
       </div>
       <div class="footer-copyright">&copy; The Folclore Company, 2018-2025</div>
     </div>
-
-    <script>
-        // Your articles data - Just add new articles to this array!
-        const articles = [
-            {
-                title: "Founders' Journey: From Vision to Reality",
-                date: "October 13, 2018",
-                excerpt: "Nick Walker and Gui Junqueira share the story behind The Folclore Company and their mission to redefine luxury through a tropical lens.",
-                url: "article-1.html"
-            },
-            {
-                title: "The Art of Tropical Luxury",
-                date: "January 15, 2020",
-                excerpt: "Exploring the intersection of Latin heritage and contemporary luxury, we uncover what makes tropical elegance a unique expression of sophistication.",
-                url: "article-2.html"
-            },
-            {
-                title: "Craftsmanship Meets Culture",
-                date: "December 20, 2021",
-                excerpt: "A deep dive into our process of selecting artisans and materials that honor tradition while pushing the boundaries of modern design.",
-                url: "article-3.html"
-            }
-        ];
-
-        // Render articles
-        function renderArticles() {
-            const articleList = document.getElementById('articles');
-            
-            articles.forEach(article => {
-                const li = document.createElement('li');
-                li.className = 'article';
-                li.innerHTML = `
-                    <h2><a href="${article.url}">${article.title}</a></h2>
-                    <p class="article-meta">${article.date}</p>
-                    <p class="article-excerpt">${article.excerpt}</p>
-                `;
-                articleList.appendChild(li);
-            });
-        }
-
-        // Load articles when page loads
-        renderArticles();
-    </script>
 </body>
 </html>
