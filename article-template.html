@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title - The Folclore Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2a2a2a;
+            background: #faf8f3;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 60px;
+            border-bottom: 1px solid #e8e5dc;
+            background: #faf8f3;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 30px;
+        }
+
+        nav a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-left: 30px;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Article */
+        article {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-content {
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        .article-content p {
+            margin-bottom: 28px;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            font-weight: 400;
+            margin: 48px 0 24px 0;
+        }
+
+        .article-content blockquote {
+            font-style: italic;
+            font-size: 24px;
+            margin: 40px 0;
+            padding-left: 30px;
+            border-left: 3px solid #e8e5dc;
+            color: #666;
+        }
+
+        /* Back link */
+        .back-link {
+            margin-bottom: 60px;
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-link:hover {
+            color: #2a2a2a;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            article {
+                padding: 60px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .article-content {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="The Folclore Company" class="logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="blog.html">Journal</a>
+            </nav>
+        </div>
+    </header>
+
+    <article>
+        <a href="blog.html" class="back-link">← Back to Journal</a>
+        
+        <h1>The Art of Tropical Luxury</h1>
+        <p class="article-meta">January 15, 2025</p>
+        
+        <div class="article-content">
+            <p>
+                When we speak of luxury in the tropics, we're not merely discussing high-end products or exclusive experiences. We're exploring a philosophy that intertwines the natural abundance of Latin America with a refined sensibility that honors both tradition and innovation.
+            </p>
+
+            <p>
+                The tropical luxury that The Folclore Company represents is rooted in authenticity. It's found in the skilled hands of artisans who have inherited techniques passed down through generations, in materials sourced from the rich landscapes of our heritage, and in designs that capture the essence of a lifestyle lived in harmony with nature.
+            </p>
+
+            <blockquote>
+                "True luxury is not about excess, but about the perfect expression of cultural identity through exceptional craftsmanship."
+            </blockquote>
+
+            <h2>A New Standard</h2>
+
+            <p>
+                Our approach challenges conventional notions of luxury. Where others might see simplicity, we see sophistication. Where others might import foreign ideals, we celebrate what is inherently ours. This is not about creating products for the tropics; it's about creating products from the tropics that speak to a global audience.
+            </p>
+
+            <p>
+                Each piece in our collection tells a story—of the hands that made it, the land that inspired it, and the culture that gave it meaning. This is the luxury we offer: not just objects, but connections to a rich and vibrant heritage, reimagined for the contemporary world.
+            </p>
+        </div>
+    </article>
+</body>
+</html>
