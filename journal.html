@@ -4,134 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal - The Folclore Company</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            color: #2a2a2a;
-            background: #faf8f3;
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-
-        /* Header */
-        header {
-            padding: 40px 60px;
-            border-bottom: 1px solid #e8e5dc;
-            background: #faf8f3;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 30px;
-        }
-
-        nav a {
-            color: #2a2a2a;
-            text-decoration: none;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        nav a:hover {
-            opacity: 0.7;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: 400;
-            margin-bottom: 60px;
-            text-align: center;
-        }
-
-        /* Article List */
-        .article-list {
-            list-style: none;
-        }
-
-        .article {
-            margin-bottom: 60px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid #e8e5dc;
-        }
-
-        .article:last-child {
-            border-bottom: none;
-        }
-
-        .article h2 {
-            font-size: 28px;
-            font-weight: 400;
-            margin-bottom: 12px;
-        }
-
-        .article h2 a {
-            color: #2a2a2a;
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-        }
-
-        .article h2 a:hover {
-            opacity: 0.7;
-        }
-
-        .article-meta {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .article-excerpt {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #3a3a3a;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            header {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 28px;
-                margin-bottom: 40px;
-            }
-
-            .article h2 {
-                font-size: 24px;
-            }
-
-            .article-excerpt {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ2L16H5DM"></script>
 <script>
@@ -156,6 +29,15 @@
         <h1>Journal</h1>
         <ul class="article-list" id="articles"></ul>
     </main>
+
+    <div class="footer">
+      <div class="footer-links">
+        <a href="journal.html">Journal</a> |
+        <a href="investors.html">Investors</a> |
+        <a href="products.html">Products</a>
+      </div>
+      <div class="footer-copyright">&copy; The Folclore Company, 2018-2025</div>
+    </div>
 
     <script>
         // Your articles data - Just add new articles to this array!
