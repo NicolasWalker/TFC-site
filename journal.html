@@ -4,53 +4,405 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal - The Folclore Company</title>
-    <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ2L16H5DM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ2L16H5DM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YQ2L16H5DM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  gtag('config', 'G-YQ2L16H5DM');
-</script>
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 13px;
+            background: #f6f6ef;
+            color: #000;
+            line-height: 1.4;
+        }
+
+        /* Header */
+        .header {
+            background: #000;
+            padding: 2px;
+        }
+
+        .header-content {
+            max-width: 1210px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 2px 10px;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .logo-icon {
+            width: 18px;
+            height: 18px;
+            border: 1px solid #fff;
+            background: #fff;
+            margin-right: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 11px;
+            color: #000;
+        }
+
+        .site-name {
+            font-weight: bold;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links span {
+            color: #fff;
+        }
+
+        /* Main content */
+        .main-content {
+            max-width: 1210px;
+            margin: 0 auto;
+            background: #f6f6ef;
+            min-height: calc(100vh - 100px);
+        }
+
+        .article-list {
+            padding: 10px 0 20px 0;
+        }
+
+        .article-row {
+            display: flex;
+            padding: 4px 10px;
+        }
+
+        .rank {
+            min-width: 30px;
+            text-align: right;
+            color: #828282;
+            font-size: 11px;
+            padding-right: 5px;
+        }
+
+        .article-content {
+            flex: 1;
+        }
+
+        .article-title {
+            margin-bottom: 2px;
+        }
+
+        .article-title a {
+            color: #000;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .article-title a:visited {
+            color: #828282;
+        }
+
+        .article-meta {
+            font-size: 10px;
+            color: #828282;
+        }
+
+        .article-meta a {
+            color: #828282;
+            text-decoration: none;
+        }
+
+        .article-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .separator {
+            margin: 0 4px;
+        }
+
+        /* Footer */
+        .footer {
+            max-width: 1210px;
+            margin: 30px auto 0;
+            padding: 10px;
+            border-top: 2px solid #000;
+            text-align: center;
+            font-size: 11px;
+        }
+
+        .footer-links {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #828282;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            color: #828282;
+            font-size: 10px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 2px 5px;
+            }
+
+            .article-row {
+                padding: 4px 5px;
+            }
+
+            .rank {
+                min-width: 20px;
+                font-size: 10px;
+            }
+
+            .article-title a {
+                font-size: 12px;
+            }
+
+            .nav-links {
+                font-size: 11px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="journal-header">
-        <img src="logo.png" alt="The Folclore Company" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-        </nav>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <div class="logo-icon">F</div>
+                <span class="site-name">Folclore Journal</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">home</a>
+                <span>|</span>
+                <a href="#" id="sort-new">new</a>
+                <span>|</span>
+                <a href="#" id="sort-oldest">oldest</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="journal-main">
-      <h1>Journal</h1>
-      <section class="article-list">
-        <article class="article">
-          <h2><a href="article-1.html">Founders' Journey: From Vision to Reality</a></h2>
-          <p class="article-meta">October 13, 2018</p>
-          <p class="article-excerpt">Nick Walker and Gui Junqueira share the story behind The Folclore Company and their mission to redefine luxury through a tropical lens.</p>
-        </article>
-        <article class="article">
-          <h2><a href="article-2.html">The Art of Tropical Luxury</a></h2>
-          <p class="article-meta">January 15, 2020</p>
-          <p class="article-excerpt">Exploring the intersection of Latin heritage and contemporary luxury, we uncover what makes tropical elegance a unique expression of sophistication.</p>
-        </article>
-        <article class="article">
-          <h2><a href="article-3.html">Craftsmanship Meets Culture</a></h2>
-          <p class="article-meta">December 20, 2021</p>
-          <p class="article-excerpt">A deep dive into our process of selecting artisans and materials that honor tradition while pushing the boundaries of modern design.</p>
-        </article>
-      </section>
+    <main class="main-content">
+        <div class="article-list" id="articles">
+            <!-- Articles will be rendered here -->
+        </div>
     </main>
 
-    <div class="footer">
-      <div class="footer-links">
-        <a href="journal.html">Journal</a> |
-        <a href="investors.html">Investors</a> |
-        <a href="products.html">Products</a>
-      </div>
-      <div class="footer-copyright">&copy; The Folclore Company, 2018-2025</div>
-    </div>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="journal.html">Journal</a>
+            <a href="investors.html">Investors</a>
+            <a href="products.html">Portfolio</a>
+            <a href="mailto:hello@folclore.com">Get in Touch</a>
+        </div>
+        <div class="footer-copyright">&copy; The Folclore Company, 2018-2025</div>
+    </footer>
+
+    <script>
+        // Article data
+        const articles = [
+            {
+                title: "Founders' Journey: From Vision to Reality",
+                author: "Nick Walker & Gui Junqueira",
+                date: new Date("2018-10-13"),
+                url: "article-1.html"
+            },
+            {
+                title: "The Art of Tropical Luxury",
+                author: "Editorial Team",
+                date: new Date("2020-01-15"),
+                url: "article-2.html"
+            },
+            {
+                title: "Craftsmanship Meets Culture",
+                author: "Design Team",
+                date: new Date("2021-12-20"),
+                url: "article-3.html"
+            },
+            {
+                title: "Redefining Luxury Through a Latin Lens",
+                author: "Gui Junqueira",
+                date: new Date("2022-03-05"),
+                url: "#"
+            },
+            {
+                title: "The Materials: Stories from Our Supply Chain",
+                author: "Production Team",
+                date: new Date("2022-06-18"),
+                url: "#"
+            },
+            {
+                title: "Tropical Modernism: A Design Philosophy",
+                author: "Nick Walker",
+                date: new Date("2022-09-10"),
+                url: "#"
+            },
+            {
+                title: "Behind the Scenes: Our First Collection",
+                author: "Editorial Team",
+                date: new Date("2022-11-25"),
+                url: "#"
+            },
+            {
+                title: "The Future of Latin American Design",
+                author: "Design Team",
+                date: new Date("2023-02-14"),
+                url: "#"
+            },
+            {
+                title: "Sustainability in Tropical Manufacturing",
+                author: "Production Team",
+                date: new Date("2023-04-22"),
+                url: "#"
+            },
+            {
+                title: "Cultural Heritage as Innovation Driver",
+                author: "Gui Junqueira",
+                date: new Date("2023-07-08"),
+                url: "#"
+            },
+            {
+                title: "Artisan Spotlight: Master Weavers of Guatemala",
+                author: "Editorial Team",
+                date: new Date("2023-09-15"),
+                url: "#"
+            },
+            {
+                title: "The Color Palette of the Tropics",
+                author: "Design Team",
+                date: new Date("2023-11-02"),
+                url: "#"
+            },
+            {
+                title: "Building a Brand from Latin America",
+                author: "Nick Walker",
+                date: new Date("2024-01-20"),
+                url: "#"
+            },
+            {
+                title: "The Evolution of Tropical Aesthetics",
+                author: "Gui Junqueira",
+                date: new Date("2024-03-10"),
+                url: "#"
+            },
+            {
+                title: "From Concept to Creation: Product Development",
+                author: "Production Team",
+                date: new Date("2024-05-05"),
+                url: "#"
+            },
+            {
+                title: "The Global Appeal of Latin Design",
+                author: "Editorial Team",
+                date: new Date("2024-07-22"),
+                url: "#"
+            },
+            {
+                title: "Innovation Through Traditional Techniques",
+                author: "Design Team",
+                date: new Date("2024-09-30"),
+                url: "#"
+            },
+            {
+                title: "2025 Vision: The Next Chapter",
+                author: "Nick Walker & Gui Junqueira",
+                date: new Date("2025-01-15"),
+                url: "#"
+            }
+        ];
+
+        // Format date
+        function formatDate(date) {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                          'July', 'August', 'September', 'October', 'November', 'December'];
+            return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+        }
+
+        // Render articles
+        function renderArticles(sortedArticles) {
+            const container = document.getElementById('articles');
+            container.innerHTML = '';
+            
+            sortedArticles.forEach((article, index) => {
+                const row = document.createElement('div');
+                row.className = 'article-row';
+                row.innerHTML = `
+                    <span class="rank">${index + 1}.</span>
+                    <div class="article-content">
+                        <div class="article-title">
+                            <a href="${article.url}">${article.title}</a>
+                        </div>
+                        <div class="article-meta">
+                            by ${article.author}<span class="separator">|</span>${formatDate(article.date)}<span class="separator">|</span><a href="${article.url}">read</a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        // Sort functions
+        function sortByNewest() {
+            const sorted = [...articles].sort((a, b) => b.date - a.date);
+            renderArticles(sorted);
+        }
+
+        function sortByOldest() {
+            const sorted = [...articles].sort((a, b) => a.date - b.date);
+            renderArticles(sorted);
+        }
+
+        // Event listeners
+        document.getElementById('sort-new').addEventListener('click', (e) => {
+            e.preventDefault();
+            sortByNewest();
+        });
+
+        document.getElementById('sort-oldest').addEventListener('click', (e) => {
+            e.preventDefault();
+            sortByOldest();
+        });
+
+        // Initial render (newest first)
+        sortByNewest();
+    </script>
 </body>
 </html>

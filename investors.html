@@ -1,21 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investors</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investors - The Folclore Company</title>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ2L16H5DM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YQ2L16H5DM');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2a2a2a;
+            background: #faf8f3;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            padding: 40px 60px;
+            border-bottom: 1px solid #e8e5dc;
+            background: #faf8f3;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 30px;
+        }
+
+        nav a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-left: 30px;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-family: Georgia, serif;
+            border: 1px solid #e0ddd7;
+            border-radius: 4px;
+            background: #faf8f3;
+            transition: all 0.2s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2a2a2a;
+            background: #fff;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: #2a2a2a;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: Georgia, serif;
+        }
+
+        .submit-btn:hover {
+            background: #1a1a1a;
+        }
+
+        .error-message {
+            display: none;
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #e8e5dc;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #2a2a2a;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            color: #888;
+            font-size: 11px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .login-container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            input {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Investors</h1>
-  <!-- Content coming soon -->
-    <div class="footer">
-      <div class="footer-links">
-        <a href="journal.html">Journal</a> |
-        <a href="investors.html">Investors</a> |
-        <a href="products.html">Products</a>
-      </div>
-      <div class="footer-copyright">&copy; The Folclore Company, 2018-2025</div>
-    </div>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="logo.png" alt="The Folclore Company" class="logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="journal.html">Journal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="login-container">
+            <h1>Investor Access</h1>
+            <p class="subtitle">Private portal for accredited investors</p>
+            
+            <div class="error-message" id="errorMessage">
+                Invalid credentials. Access restricted to authorized investors only.
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="journal.html">Journal</a>
+            <a href="investors.html">Investors</a>
+            <a href="products.html">Portfolio</a>
+            <a href="mailto:hello@folclore.com">Get in Touch</a>
+        </div>
+        <div class="footer-copyright">&copy; The Folclore Company, 2018-2025</div>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get the error message element
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Hide error initially (in case it's already showing)
+            errorMsg.classList.remove('show');
+            
+            // Show error after a brief delay to simulate checking credentials
+            setTimeout(() => {
+                errorMsg.classList.add('show');
+                
+                // Clear the password field for security
+                document.getElementById('password').value = '';
+            }, 500);
+        });
+    </script>
 </body>
-</html> 
+</html>

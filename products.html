@@ -1,21 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - The Folclore Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #2a2a2a;
+            background: #faf8f3;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            padding: 40px 60px;
+            border-bottom: 1px solid #e8e5dc;
+            background: #faf8f3;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 30px;
+        }
+
+        nav a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-left: 30px;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Main content */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 60px;
+        }
+
+        .page-intro {
+            margin-bottom: 60px;
+        }
+
+        .page-intro h1 {
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .page-intro p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Portfolio grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .brand-card {
+            border-top: 1px solid #e8e5dc;
+            padding-top: 20px;
+        }
+
+        .brand-name {
+            font-size: 20px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-category {
+            font-size: 13px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .brand-description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #3a3a3a;
+            margin-bottom: 12px;
+        }
+
+        .brand-status {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .brand-link {
+            font-size: 13px;
+            color: #2a2a2a;
+            text-decoration: none;
+            border-bottom: 1px solid #2a2a2a;
+            margin-top: 8px;
+            display: inline-block;
+        }
+
+        .brand-link:hover {
+            color: #666;
+            border-bottom-color: #666;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #e8e5dc;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #2a2a2a;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            color: #888;
+            font-size: 11px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .main-content {
+                padding: 60px 20px;
+            }
+
+            .page-intro h1 {
+                font-size: 24px;
+            }
+
+            .page-intro p {
+                font-size: 16px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .brand-name {
+                font-size: 18px;
+            }
+
+            .brand-description {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Products</h1>
-  <!-- Content coming soon -->
-    <div class="footer">
-      <div class="footer-links">
-        <a href="journal.html">Journal</a> |
-        <a href="investors.html">Investors</a> |
-        <a href="products.html">Products</a>
-      </div>
-      <div class="footer-copyright">&copy; The Folclore Company, 2018-2025</div>
-    </div>
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="logo.png" alt="The Folclore Company" class="logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="journal.html">Journal</a>
+                <a href="investors.html">Investors</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-intro">
+            <h1>Portfolio</h1>
+            <p>The Folclore Company builds and acquires luxury brands that define tropical elegance and Latin American sophistication.</p>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="brand-card">
+                <h2 class="brand-name">Cãna Cachaça</h2>
+                <p class="brand-category">Spirits</p>
+                <p class="brand-description">Premium Brazilian cachaça redefining the category with exceptional craft and heritage.</p>
+                <p class="brand-status">Founded 2018</p>
+                <a href="https://canacachaca.com" class="brand-link" target="_blank">canacachaca.com</a>
+            </div>
+
+            <div class="brand-card">
+                <h2 class="brand-name">Dom Maria</h2>
+                <p class="brand-category">Sparkling Wine</p>
+                <p class="brand-description">Brazilian Brut championing the terroir and winemaking excellence of Brazil's finest vineyards.</p>
+                <p class="brand-status">Founded 2020</p>
+                <a href="https://dommaria.com" class="brand-link" target="_blank">dommaria.com</a>
+            </div>
+
+            <div class="brand-card">
+                <h2 class="brand-name">Pingo</h2>
+                <p class="brand-category">Luxury Tea</p>
+                <p class="brand-description">Artisanal tea brand sourcing the finest leaves from Latin America's high-altitude gardens.</p>
+                <p class="brand-status">Founded 2019, Acquired 2025</p>
+                <a href="https://pingotea.com" class="brand-link" target="_blank">pingotea.com</a>
+            </div>
+
+            <div class="brand-card">
+                <h2 class="brand-name">Aparelho Studio</h2>
+                <p class="brand-category">Design Studio</p>
+                <p class="brand-description">Creative studio specializing in brand identity and digital experiences for luxury brands.</p>
+                <p class="brand-status">Founded 2015, Acquired 2022</p>
+                <a href="https://aparelho.studio" class="brand-link" target="_blank">aparelho.studio</a>
+            </div>
+
+            <div class="brand-card">
+                <h2 class="brand-name">Links Garden</h2>
+                <p class="brand-category">Technology</p>
+                <p class="brand-description">Distraction-free reading app designed for deep focus and thoughtful content consumption.</p>
+                <p class="brand-status">Founded 2023</p>
+                <a href="https://linksgarden.app" class="brand-link" target="_blank">linksgarden.app</a>
+            </div>
+
+            <div class="brand-card">
+                <h2 class="brand-name">CIWI</h2>
+                <p class="brand-category">Technology</p>
+                <p class="brand-description">Next-generation digital platform reimagining how we connect with culture and lifestyle.</p>
+                <p class="brand-status">Coming Soon</p>
+                <a href="https://ciwi.app" class="brand-link" target="_blank">ciwi.app</a>
+            </div>
+
+            <div class="brand-card">
+                <h2 class="brand-name">FACT Foundation</h2>
+                <p class="brand-category">Non-Profit</p>
+                <p class="brand-description">Fighting counterfeits in the spirits industry in partnership with Diageo and Pernod Ricard.</p>
+                <p class="brand-status">Founded 2021</p>
+                <a href="https://factfoundation.org" class="brand-link" target="_blank">factfoundation.org</a>
+            </div>
+
+            <div class="brand-card">
+                <h2 class="brand-name">Amazzoni Gin</h2>
+                <p class="brand-category">Spirits - Exited</p>
+                <p class="brand-description">Brazilian gin infused with Amazonian botanicals, creating a unique tropical expression.</p>
+                <p class="brand-status">Acquired by Pernod Ricard 2022</p>
+                <a href="https://amazzonigin.com" class="brand-link" target="_blank">amazzonigin.com</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="journal.html">Journal</a>
+            <a href="investors.html">Investors</a>
+            <a href="products.html">Portfolio</a>
+            <a href="mailto:hello@folclore.com">Get in Touch</a>
+        </div>
+        <div class="footer-copyright">&copy; The Folclore Company, 2018-2025</div>
+    </footer>
 </body>
-</html> 
+</html>
